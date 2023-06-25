@@ -77,7 +77,7 @@ export default function NewProducts({ products, wishedProducts }) {
         ))}
           </Slider>
           <ButtonWrapper>
-            <ButtonLink href={'/categories'} outline={1} black={1}>Побачити більше</ButtonLink>
+            <ButtonLink href={'/products'} outline={1} black={1}>Побачити більше</ButtonLink>
           </ButtonWrapper>
           </RevealWrapper>
       </Center>

@@ -37,12 +37,12 @@ export default async function handler(req,res) {
     }
   }
 
-  // const session = await getServerSession(req,res,authOptions);
+  const session = await getServerSession(req,res,authOptions);
 
   const orderDoc = await Order.create({
     line_items,name,email,city,postalCode,
     streetAddress,country,paid:false,
-    //userEmail: session?.user?.email,
+    userEmail: session?.user?.email,
   });
 
   const shippingFeeSetting = await Setting.findOne({name:'shippingFee'});

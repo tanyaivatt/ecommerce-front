@@ -142,7 +142,6 @@ export default function Header() {
             <NavLink href={'/products'}>Всі товари</NavLink>
             <NavLink href={'/categories'}>Каталог</NavLink>
           </StyledNav>
-          {/* <LogoL /> */}
           <Logo href={'/'}>G Y H</Logo>
           <SideIcons>
             <Link href={'/search'}><SearchIcon /></Link>

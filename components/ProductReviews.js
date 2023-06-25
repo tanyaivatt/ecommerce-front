@@ -79,35 +79,35 @@ export default function ProductReviews({product}) {
   }
   return (
     <div>
-      <Title>Reviews</Title>
+      <Title>Відгуки</Title>
       <ColsWrapper>
         <div>
           <WhiteBox>
-            <Subtitle>Add a review</Subtitle>
+            <Subtitle>Додати відгук</Subtitle>
             <div>
               <StarsRating onChange={setStars} />
             </div>
             <Input
               value={title}
               onChange={ev => setTitle(ev.target.value)}
-              placeholder="Title" />
+              placeholder="Назва" />
             <Textarea
               value={description}
               onChange={ev => setDescription(ev.target.value)}
-              placeholder="Was it good? Pros? Cons?" />
+              placeholder="Чи це хороший товар? Переваги? Недоліки?" />
             <div>
-              <Button primaryBlack onClick={submitReview}>Submit your review</Button>
+              <Button primaryBlack onClick={submitReview}>Надіслати</Button>
             </div>
           </WhiteBox>
         </div>
         <div>
           <WhiteBox>
-            <Subtitle>All reviews</Subtitle>
+            <Subtitle>Всі відгуки</Subtitle>
             {reviewsLoading && (
               <Spinner fullWidth={true} />
             )}
             {reviews.length === 0 && (
-              <p>No reviews </p>
+              <p>Немає відгуків </p>
             )}
             {reviews.length > 0 && reviews.map(review => (
               <ReviewWrapper key={review._id}>

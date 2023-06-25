@@ -8,13 +8,9 @@ import {WishedProduct} from "@/models/WishedProduct";
 import {getServerSession} from "next-auth";
 import {authOptions} from "@/pages/api/auth/[...nextauth]";
 import { Setting } from "@/models/Setting";
-import Catalog from "@/components/Catalog/Catalog";
-import Video from "@/components/Video";
-import GeometricDiv from "@/components/GeometricDiv";
 import Footer2 from "@/components/Footer2";
 import Wave from "@/components/Wave";
 import WaveBottom from "@/components/WaveBottom";
-import FeaturedWave from "@/components/FeaturedWave";
 import Instagram from "@/components/Instagram";
 
 
@@ -23,16 +19,10 @@ export default function HomePage({featuredProduct,newProducts,wishedNewProducts}
     <div>
       <Header />
       <Main1 />
-      
       <NewProducts products={newProducts} wishedProducts={wishedNewProducts} />
-      {/* <Catalog products={newProducts} wishedProducts={wishedNewProducts} /> */}
-      
       <Wave/>
       <Featured product={featuredProduct} />
       <WaveBottom/>
-      {/* <Video /> */}
-      {/* <About product={featuredProduct} /> */}
-      {/* <GeometricDiv/> */}
       <Instagram />
       <Wave/>
       <Footer2/>
